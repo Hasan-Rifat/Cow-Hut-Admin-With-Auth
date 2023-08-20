@@ -12,7 +12,6 @@ router.get(
   auth(USER_ENUM.BUYER, USER_ENUM.SELLER),
   UserController.getMyProfile
 );
-
 router.get('/', UserController.getAllUser);
 router.get('/:id', auth(USER_ENUM.ADMIN), UserController.getSingleUser);
 router.patch('/:id', auth(USER_ENUM.ADMIN), UserController.updateUser);
